@@ -328,7 +328,7 @@ end
 mergeTables(files, emitModule(api, "love"))
 
 for i, v in pairs(files) do
-	os.execute("mkdir -p " .. dirname(i))
+	os.execute("mkdir " .. string.gsub( dirname(i),"/","\\" ))
 	local f = io.open(i, "w")
 	f:write(v)
 	f:close()
