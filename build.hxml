@@ -1,0 +1,6 @@
+-cp src
+-lua main.lua
+-main Main
+-D lua-vanilla
+-dce full
+-cmd love ./
